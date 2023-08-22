@@ -37,7 +37,7 @@ nav{
     width: 40px;
     color: aliceblue;
 }
-.logo div{
+.logo div .baricon{
     border: none;
     font-size: 10px;
     border-radius: 40px;
@@ -501,7 +501,7 @@ main .center .friends_post .friends_post_top .menu i{
 main .center .friends_post img{
     width: 100%;
     height: 450px;
-    object-fit: cover;
+    object-fit: contain;
     object-position: center;
     border-radius: 5px;
 }
@@ -625,4 +625,342 @@ main .center .friends_post .comment_warpper .comment_search input{
 main .center .friends_post .comment_warpper .comment_search i{
     padding: 0 5px;
     color: var(--icon-not-use);
+}
+
+
+
+/*RIGHT side*/
+main .right{
+    width: 25%;
+    height: 92vh;
+    overflow: hidden;
+    overflow-y: scroll;
+    background: var(--backroud2);
+    padding: 20px 10px 5px 6px;
+    position: fixed;
+    right: 0;
+}
+
+
+main .right::-webkit-scrollbar{
+    width: 7px;
+}
+
+main .right::-webkit-scrollbar-thumb{
+    border-radius: 20px;
+    background-color: var(--backroud2);
+}
+
+main .right:hover::-webkit-scrollbar-thumb{
+    background-color: var(--icon-not-use);
+}
+
+main .right .first_wrapper .page{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main .right .first_wrapper .page h2{
+    font-size: 18px;
+    color: var(--icon-not-use);
+    margin: 5px 0;
+}
+
+main .right .first_wrapper .page .menu{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    color: var(--name-color);
+}
+
+main .right .first_wrapper .page .menu:hover{
+    background-color: var(--hover-color);
+    color: var(--name-color);
+    cursor: pointer;
+}
+
+main .right .first_wrapper .page .menu i{
+    line-height: 35px;
+    margin-left: 10px;
+    font-size: 18px;
+    color: var(--icon-not-use);
+}
+
+main .right .first_wrapper .page_img{
+    display: flex;
+    align-items: center;
+}
+main .right .first_wrapper .page_img p,
+main .right .first_wrapper .page_icon p{
+    color: var(--name-color);
+}
+
+main .right .first_wrapper .page_img img{
+    width: 35px;
+    height: 35px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    margin: 8px 15px 8px 0;
+    cursor: pointer;
+}
+
+main .right .first_wrapper .page_icon{
+    display: flex;
+    align-items: center;
+}
+
+main .right .first_wrapper .page_icon i{
+    color: var(--icon-not-use);
+    font-size: 20px;
+    margin: 8px 15px 8px 0;
+}
+
+main .right hr{
+    width: 100%;
+    height: 1px;
+    border: 0;
+    background-color: var(--icon-not-use);
+    margin: 10px auto;
+}
+
+
+main .right .second_warpper h2{
+    font-size: 17px;
+    color: var(--icon-not-use);
+    margin: 5px 0;
+}
+
+
+main .right .second_warpper .img_and_tag{
+    display: flex;
+    align-items: center;
+}
+
+main .right .second_warpper .img_and_tag .img{
+    margin: 8px 15px 8px 0;
+}
+
+main .right .second_warpper .img_and_tag p{
+    color: var(--name-color);
+    line-height: 22px;
+}
+
+main .right .second_warpper .img_and_tag p span{
+    font-weight: bold;
+}
+
+main .right .third_warpper .contact_tag{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main .right .third_warpper .contact_tag h2{
+    font-size: 17px;
+    color: var(--icon-not-use);
+    margin: 5px 0;
+}
+
+main .right .third_warpper .contact_tag .contact_icon i{
+    margin: 0 5px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    line-height: 35px;
+    padding-left: 10px;
+    color: var(--icon-not-use);
+}
+
+main .right .third_warpper .contact_tag .contact_icon i:hover{
+    background-color: var(--hover-color);
+    cursor: pointer;
+}
+
+main .right .third_warpper .contact{
+    display: flex;
+    align-items: center;
+}
+
+main .right .third_warpper .contact img{
+    width: 35px;
+    height: 35px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    margin: 8px 15px 8px 0;
+    border: 3px solid #45abff;
+    cursor: pointer;
+}
+
+main .right .third_warpper .contact p{
+    color: var(--name-color);
+    font-weight: bold;
+}
+
+.none,
+.postmob{
+    display: none;
+}
+
+#none{
+    display: none;
+}
+
+
+
+@media screen and (max-width: 765px) {
+    main .left,
+    main .right,
+    .logo #img,
+    nav .logo div p,
+    .account,
+    .post{
+        display: none;
+    }
+
+    .none{
+        display:block;
+    }
+
+    #none{
+        display: block;
+    }
+
+    nav{
+        flex-direction: column;
+    }
+     
+    main{
+        margin-top: 100px;
+    }
+
+    main .center{
+        width: 100%;
+        margin-left: 0;
+        padding: 0;
+    }
+
+    .logo{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 5px;
+    }
+
+    .logo b{
+        color: var(--name-color);
+        font-size: 22px;
+        cursor: pointer;
+    }
+
+    .logo div{
+        display: flex;
+        align-items: center;
+    }
+
+    .logo div .baricon{
+    margin-left: 5px;
+    border: none;
+    font-size: 10px;
+    border-radius: 40px;
+    padding: 8px;
+    width: 40px;
+    height: 40px;
+    background-color: #3a3b3c;
+    }
+
+    .logo div .baricon:hover{
+        background-color: var(--hover-color);
+        cursor: pointer;
+    }
+
+    .logo div .baricon i{
+        color: var(--icon-not-use);
+        font-size: 18px;
+        margin: 5px 0 0 3px;
+    }
+
+    .logo div img{
+        margin-left: 3px;
+    }
+    .menu{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        align-content: center;
+    }
+
+    .menu .x1lliihq{    
+        margin: 13px 20px;
+        color: var(--icon-not-use);
+        width: 20px;
+        height: 20px;
+    }
+    .menu #ic-use{
+        border-bottom: none;
+    }
+
+    .postmob{
+        background-color: var(--backround1);
+        display: grid;
+        grid-template-columns: 1fr 6fr 1fr;
+        margin: 5px auto;
+        padding: 10px 0;
+    }
+    .postmob .profile{
+        width: 45px;
+    }
+    .postmob .profile img{
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .postmob .status input{
+        width: 100%;
+        padding: 10px;
+        border: 0;
+        outline: none;
+        background-color: rgb(65, 65, 65);
+        border-radius: 30px;
+        font-size: 15px;
+    }
+
+    .postphoto i{
+        color: var(--icon-not-use);
+        font-size: 30px;
+        margin-left: 2px;
+    }
+    .postphoto p{
+        color:var(--name-color);
+        font-size: 15px;
+    }
+
+    main .center .topbox{
+        margin-left: 0;
+        overflow: hidden;
+        overflow-x: scroll;
+    }
+
+    main .center .topbox .mystory{
+        width: 110px;
+        height: 210px;
+        margin: 5px;
+    }
+
+    main .center .topbox .storycard{
+        width: 110px;
+        height: 210px;
+        margin: 5px;
+    }
+
+
+    main .center .topbox .storycard .story_profile{
+        position: relative;
+        bottom: 210px;
+        margin-left: 8px;
+    }
 }
